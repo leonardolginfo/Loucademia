@@ -28,7 +28,7 @@ h1{
 	border-radius: 30px; 
 }
 
-h1,div#infoMessage,fieldset{
+h1,div#infoMessage,fieldset,table{
 	margin-left: auto;
 	margin-right:auto;
 }
@@ -76,17 +76,56 @@ input[type=text]
 width:95%;
 }
 
-
-
 input[type=tel]#telefoneCelularDdd,
+input[type=tel]#telefoneDdd,
 input[type=tel]#telefoneFixoDdd
 {
 	width:30px;
 }
 
-input#telefoneCelular,
-input#telefoneFixo,
-input#numeroTelefone
+input[type=tel]#telefoneCelular,
+input[type=tel]#telefoneFixo,
+input[type=tel]#numeroTelefone
 {
-	width:95%;
+	width:83%;
+}
+
+input[type=submit],
+input[type=button]
+ {
+	background-color:#348F1D;
+	padding: 8px 10px ;
+	border-radius:5px;
+	color: #ffffff;
+	font-weight: bold;
+	text-transform: uppercase; 
+}
+input[type=submit]:hover,
+input[type=button]:hover{
+	background-color: #7ABA41;	
+}
+table{
+	background-color:#ffffff;
+	font-size:14px;
+	width: 90%;
+	border-spacing: 1px;
+	border-collapse: separate;
+	}
+	
+th{
+	background-color:#348F1D;
+	text-transform: uppercase;
+	color:#ffffff;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	}
+	
+tr:nth-child(even) {
+	background-color: #f3e6f7;
+}	
+tr:nth-child(odd){
+	background-color: #ffffff;
+}
+td{
+	padding: 3px;
 }
