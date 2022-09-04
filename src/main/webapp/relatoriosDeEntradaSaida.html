@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Loucademia - Pesquisa</title>
+<title>Loucademia - Rel Entrada e Saída</title>
 </head>
 <body>
 	<header> 
@@ -20,7 +20,7 @@
 		</nav> 
 	</header>
 	<!--Cabeçalho Fim-->
-<h1>Pesquisar por aluno:</h1>
+<h1>Relatório de Entrada e Saída:</h1>
 <div id="infoMessage">(Aqui vai um eventual erro de sistema confirmando sucesso ou erro)</div>
 <br/>
 <form>
@@ -28,16 +28,10 @@
 		<legend>Pesquisa de Aluno</legend>
 		<label for="id">ID:</label><br/>
 		<input type="text" name="id" id="id"><br/>
-		
-		<label for="nome">Nome:</label><br/>
-		<input type="text" name="nome" id="nome"><br/>
-					
-		<label for="rg">RG:</label><br/>
-		<input type="text" name="rg" id="rg"><br/>
-		
-		<label for="telefoneDdd">Telefone Celular:</label><br/>
-		<input type="tel" name="telefoneDdd" id="telefoneDdd" size="2" maxlength="2"  placeholder="DDD"/>
-		<input type="tel" name="numeroTelefone" id="numeroTelefone" size="10" maxlength="10" placeholder="número" /><br/>
+		<label for="dataInicial">Data Inicial:</label><br/>
+		<input type="date" name="dataInicial" id="dataInicial"><br/>
+		<label for="dataFinal">Data Final:</label><br/>
+		<input type="date" name="dataFinal" id="dataFinal"><br/>
 	</fieldset>	
 
 	<input type="submit" value="Buscar"/>
@@ -47,43 +41,30 @@
 		<tr>
 			<th>ID</th>
 			<th>Nome</th>
-			<th>RG</th>
-			<th>E-mail</th>
-			<th>Situações</th>
-			<th>Ações</th>
+			<th>Entrada</th>
+			<th>Saída</th>
+			<th>Duração</th>
 		</tr>
 		<tr>
 			<td>1</td>
-			<td>Leonardo</td>
-			<td>1111111</td>
-			<td>teste@teste.com</td>
-			<td>Ativo</td>
-			<td>
-				<input type="button" value="Editar">
-				<input type="button" value="Excluir">
-			</td>
+			<td>Leonardo Gonçalves</td>
+			<td>22/08/2022 10h00m</td>
+			<td>22/08/2022 11h30m</td>
+			<td>1h30m</td>
 		</tr>
 		<tr>
 			<td>2</td>
 			<td>Ribeiro Segundo</td>
-			<td>222222</td>
-			<td>ribteste@teste.com</td>
-			<td>Inativo</td>
-			<td>
-				<input type="button" value="Editar">
-				<input type="button" value="Excluir">
-			</td>
+			<td>04/09/2022 06h00m</td>
+			<td>04/09/2022 08h30m</td>
+			<td>2h30m</td>
 		</tr>
 		<tr>
 			<td>3</td>
-			<td>Marizinha dos Anzóis Pereira</td>
-			<td>323512</td>
-			<td>mariape@teste.com</td>
-			<td>Pendência</td>
-			<td>
-				<input type="button" value="Editar">
-				<input type="button" value="Excluir">
-			</td>
+			<td>Marizinha dos Anzóis</td>
+			<td>03/09/2022 20h10m</td>
+			<td>03/09/2022 21h40m</td>
+			<td>1h30m</td>
 		</tr>
 	</table>
 
