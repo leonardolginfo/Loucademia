@@ -1,1 +1,63 @@
-@charset "ISO-8859-1";
+*{
+	font-family: "Arial";
+}
+body{
+	background-color:#822A72;
+	text-align: center;
+}
+
+nav a {
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase; 
+}
+
+nav a:hover{
+	text-decoration: underline;
+}
+h1{
+	color:#7ABA41;
+	background-color: #ffffff;
+	text-decoration: uppercase;
+	font-style: italic;
+	font-size: 20px;
+	width: 400px;
+	padding:5px;
+	border-left:20px solid #7ABA41;
+	border-radius: 30px; 
+}
+
+h1,div#infoMessage,fieldset{
+	margin-left: auto;
+	margin-right:auto;
+}
+div#infoMessage{
+	background-color: #ffcc00;
+	width: 400px;
+	padding: 10px;
+	border-radius:5px;
+	color:#d40000;
+}
+
+fieldset{
+	background-color:#ffffff;
+	width:400px;	
+	border-radius:5px;
+	border:0px;
+	padding:10px; 
+	margin-bottom: 10px;
+}
+
+legend{
+	background-color: #ffffff;
+	border-radius:25px;
+	padding-top:5px;
+	padding-left: 7px;
+	padding-right:7px;
+	font-weight: bold;
+	text-align: left;
+}
+legend, label{
+	color: #822A70;
+}
