@@ -1,0 +1,83 @@
+<!--Cabeçalho Início-->
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Loucademia - Relatório de Situações</title>
+</head>
+<body>
+	<header> 
+		<img src="images/Loucademia_Logotipo.png" /> 
+		<nav>
+			<div>
+				<a href="novoAluno.html">Novo Aluno</a>
+				<a href="pesquisaDeAluno.html">Pesquisa de Aluno</a>
+				<a href="controleDeAcesso.html">Controle de Acesso</a> 
+				<a href="relatoriosDeEntradaSaida.html">Relatório de Entrada e Saída</a>
+				<a href="relatoriosDeSituacoes.html">Relatório de Situações</a>
+			</div>
+		</nav> 
+	</header>
+	<!--Cabeçalho Fim-->
+<h1>Relatório de Situações</h1>
+<div id="infoMessage">(Aqui vai um eventual erro de sistema confirmando sucesso ou erro)</div>
+<br/>
+<form>
+	<fieldset>
+		<legend>Parâmetros da pesquisa</legend>
+		<label for="situacao">Status</label>
+			<select name="situacao" id="situacao">
+				<option>Selecione</option>
+				<option>Ativo</option>
+				<option>Inativo</option>
+				<option>Pendência</option>
+			</select>	<br/>
+			<input type="button" value="Gerar Relatório"/>
+	</fieldset>
+</form>
+<table>
+		<tr>
+			<th>ID</th>
+			<th>Nome</th>
+			<th>Situação</th>
+			<th>Celular</th>
+			<th>Fixo</th>
+			<th>Ações</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Leonardo Gonçalves</td>
+			<td>Ativo</td>
+			<td>85 9999 9999</td>
+			<td>00 0000 0000</td>
+			<td>
+				<input type="button" value="Editar"></input>
+			</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Leonardo Gonçalves</td>
+			<td>Ativo</td>
+			<td>85 9999 9999</td>
+			<td>00 0000 0000</td>
+			<td>
+				<input type="button" value="Editar"></input>
+			</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Leonardo Gonçalves</td>
+			<td>Ativo</td>
+			<td>85 9999 9999</td>
+			<td>00 0000 0000</td>
+			<td>
+			<input type="button" value="Editar"></input>
+			</td>
+		</tr>
+	</table>
+
+	<!--Rodapé Início-->
+</body>
+</html>
+<!--Rodapé Fim-->
