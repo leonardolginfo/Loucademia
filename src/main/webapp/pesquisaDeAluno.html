@@ -1,0 +1,93 @@
+<!--Cabeçalho Início-->
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Loucademia</title>
+</head>
+<body>
+	<header> 
+		<img src="images/Loucademia_Logotipo.png" /> 
+		<nav>
+			<div>
+				<a href="novoAluno.html">Novo Aluno</a>
+				<a href="pesquisaDeAluno.html">Pesquisa de Aluno</a>
+				<a href="controleDeAcesso.html">Controle de Acesso</a> 
+				<a href="relatoriosDeEntradaSaida.html">Relatório de Entrada e Saída</a>
+				<a href="relatoriosDeSituacoes.html">Relatório de Situações</a>
+			</div>
+		</nav> 
+	</header>
+	<!--Cabeçalho Fim-->
+<h1>Pesquisa de Aluno</h1>
+<div id="infoMessage">(Aqui vai um eventual erro de sistema confirmando sucesso ou erro)</div>
+<br/>
+<form>
+	<fieldset>
+		<legend>Pesquisa de Aluno</legend>
+		<label for="id">ID:</label><br/>
+		<input type="text" name="id" id="id"><br/>
+		
+		<label for="nome">Nome:</label><br/>
+		<input type="text" name="nome" id="nome"><br/>
+					
+		<label for="rg">RG:</label><br/>
+		<input type="text" name="rg" id="rg"><br/>
+		
+		<label for="telefoneDdd">Telefone Celular:</label><br/>
+		<input type="tel" name="telefoneDdd" id="telefoneDdd" size="2" maxlength="2"  placeholder="DDD"/>
+		<input type="tel" name="numeroTelefone" id="numeroTelefone" size="10" maxlength="10" placeholder="número" /><br/>
+	</fieldset>	
+
+	<input type="submit" value="Buscar"/>
+</form>
+
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Nome</th>
+			<th>RG</th>
+			<th>E-mail</th>
+			<th>Situações</th>
+			<th>Ações</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Leonardo</td>
+			<td>1111111</td>
+			<td>teste@teste.com</td>
+			<td>Ativo</td>
+			<td>
+				<input type="button" value="Editar">
+				<input type="button" value="Excluir">
+			</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Ribeiro Segundo</td>
+			<td>222222</td>
+			<td>ribteste@teste.com</td>
+			<td>Inativo</td>
+			<td>
+				<input type="button" value="Editar">
+				<input type="button" value="Excluir">
+			</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Marizinha dos Anzóis Pereira</td>
+			<td>323512</td>
+			<td>mariape@teste.com</td>
+			<td>Pendência</td>
+			<td>
+				<input type="button" value="Editar">
+				<input type="button" value="Excluir">
+			</td>
+		</tr>
+	</table>
+
+	<!--Rodapé Início-->
+</body>
+</html>
+<!--Rodapé Fim-->
