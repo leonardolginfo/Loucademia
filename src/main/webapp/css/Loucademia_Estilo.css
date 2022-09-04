@@ -47,6 +47,7 @@ fieldset{
 	border:0px;
 	padding:10px; 
 	margin-bottom: 10px;
+	text-align: left;
 }
 
 legend{
@@ -56,8 +57,36 @@ legend{
 	padding-left: 7px;
 	padding-right:7px;
 	font-weight: bold;
-	text-align: left;
 }
 legend, label{
 	color: #822A70;
+}
+
+input, select{
+	border: 1px solid #822A70;
+	margin-bottom: 7px;
+	padding: 5px;
+}
+
+input[type=text]#nome,
+input[type=text]#rua,
+input[type=email]#email,
+input[type=text]
+{
+width:95%;
+}
+
+
+
+input[type=tel]#telefoneCelularDdd,
+input[type=tel]#telefoneFixoDdd
+{
+	width:30px;
+}
+
+input#telefoneCelular,
+input#telefoneFixo,
+input#numeroTelefone
+{
+	width:95%;
 }
