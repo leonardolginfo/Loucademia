@@ -1,9 +1,21 @@
 package br.com.lginfo.loucademia.domain.aluno;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Estado {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "ESTADO")
+public class Estado implements Serializable{
+	@Id
+	@Column(name = "SIGLA", nullable = false, length = 2)
 	private String sigla;
+	
+	@Column(name = "ESTADO", nullable = false, length = 30)
 	private String nomeEstado;
 
 	public String getSigla() {
