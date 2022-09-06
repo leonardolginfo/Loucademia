@@ -38,4 +38,10 @@ public class Telefone {
 		this.numFixo = numFixo;
 	}
 
+	@Override
+	public String toString() {
+		return "Telefone [dddCelular=" + dddCelular + ", dddFixo=" + dddFixo + ", numCelular=" + numCelular
+				+ ", numFixo=" + numFixo + "]";
+	}
+
 }

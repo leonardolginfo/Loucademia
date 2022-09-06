@@ -20,4 +20,9 @@ public class Estado {
 		this.nomeEstado = nomeEstado;
 	}
 
+	@Override
+	public String toString() {
+		return "Estado [sigla=" + sigla + ", nomeEstado=" + nomeEstado + "]";
+	}
+
 }
