@@ -11,6 +11,11 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "ESTADO")
 public class Estado implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@Column(name = "SIGLA", nullable = false, length = 2)
 	private String sigla;

@@ -1,14 +1,40 @@
 package br.com.lginfo.loucademia.domain.acesso;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-import br.com.lginfo.loucademia.domain.aluno.Aluno;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
-public class Acesso {
+import br.com.lginfo.loucademia.domain.aluno.Aluno;
+@Entity
+@Table(name="ENTRADAS_SAIDAS")
+public class Acesso implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="ID", nullable = false)
 	private Integer id;
+	
+	@ManyToOne
+	@JoinColumn(name="ALUNO_ID")
 	private Aluno aluno;
+	
+	@Column(name="ENTRADA", nullable = false)
 	private LocalDateTime entrada;
+	
+	@Column(name="SAIDA", nullable = true)
 	private LocalDateTime saida;
 
 	public Integer getId() {

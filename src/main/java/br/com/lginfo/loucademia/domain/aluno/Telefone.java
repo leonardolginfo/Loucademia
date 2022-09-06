@@ -1,11 +1,28 @@
 package br.com.lginfo.loucademia.domain.aluno;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Telefone {
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+
+@Embeddable
+public class Telefone implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Column(name = "CELULAR_DDD", nullable = false, length = 2)
 	private Integer dddCelular;
+
+	@Column(name = "FIXO_DDD", nullable = true, length = 2)
 	private Integer dddFixo;
+
+	@Column(name="CELULAR_NUMERO", nullable = false, length = 9)
 	private Integer numCelular;
+	
+	@Column(name="FIXO_NUMERO", nullable = true, length = 9)
 	private Integer numFixo;
 
 	public Integer getDddCelular() {

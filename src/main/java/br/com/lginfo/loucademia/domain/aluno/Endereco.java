@@ -1,13 +1,36 @@
 package br.com.lginfo.loucademia.domain.aluno;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Endereco {
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.persistence.ManyToOne;
+
+@Embeddable
+public class Endereco implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Column(name = "RUA", nullable = false, length = 128)
 	private String rua;
+
+	@Column(name = "NUMERO", nullable = true, length = 6)
 	private String numero;
+
+	@Column(name = "COMPLEMENTO", nullable = true, length = 32)
 	private String complemento;
+
+	@Column(name = "CIDADE", nullable = false, length = 64)
 	private String cidade;
+
+	@ManyToOne
+	@Column(name = "ESTADO_ID", nullable = false)
 	private Estado estado = new Estado();
+
+	@Column(name = "CEP", nullable = false, length = 8)
 	private Integer cep;
 
 	public String getRua() {
