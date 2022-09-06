@@ -1,6 +1,7 @@
 package br.com.lginfo.loucademia.domain.acesso;
 
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 import br.com.lginfo.loucademia.domain.aluno.Aluno;
 
@@ -45,5 +46,22 @@ public class Acesso {
 	@Override
 	public String toString() {
 		return "Acesso [id=" + id + ", aluno=" + aluno + ", entrada=" + entrada + ", saida=" + saida + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Acesso other = (Acesso) obj;
+		return Objects.equals(id, other.id);
 	}
 }

@@ -1,5 +1,7 @@
 package br.com.lginfo.loucademia.domain.aluno;
 
+import java.util.Objects;
+
 public class Telefone {
 	private Integer dddCelular;
 	private Integer dddFixo;
@@ -42,6 +44,24 @@ public class Telefone {
 	public String toString() {
 		return "Telefone [dddCelular=" + dddCelular + ", dddFixo=" + dddFixo + ", numCelular=" + numCelular
 				+ ", numFixo=" + numFixo + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(dddCelular, dddFixo, numCelular, numFixo);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Telefone other = (Telefone) obj;
+		return Objects.equals(dddCelular, other.dddCelular) && Objects.equals(dddFixo, other.dddFixo)
+				&& Objects.equals(numCelular, other.numCelular) && Objects.equals(numFixo, other.numFixo);
 	}
 
 }
