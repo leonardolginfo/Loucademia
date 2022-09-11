@@ -57,7 +57,7 @@
 						
 						<label for="estado">Estado:</label>
 						<select jsf:value="#{alunoBean.aluno.endereco.estado.sigla}" id="estado" size="0">
-							<f:selectItems  value="#{dataBean.estado}" var="e" itemLabel="#{e.nome}" itemValue="#{e.sigla}"/>
+							<f:selectItems  value="#{dataBean.estado}" var="e" itemLabel="#{e.nomeEstado}" itemValue="#{e.sigla}"/>
 						</select><br/>
 						
 						<label for="cep">CEP:</label><br/>
