@@ -20,7 +20,7 @@ public class Estado implements Serializable{
 	@Column(name = "SIGLA", nullable = false, length = 2)
 	private String sigla;
 	
-	@Column(name = "ESTADO", nullable = false, length = 30)
+	@Column(name = "NOME", nullable = false, length = 30)
 	private String nomeEstado;
 
 	public String getSigla() {

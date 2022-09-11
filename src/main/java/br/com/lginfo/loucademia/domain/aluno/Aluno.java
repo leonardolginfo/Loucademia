@@ -7,7 +7,6 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -29,13 +28,13 @@ public class Aluno implements Serializable {
 	}
 
 	@Id
-	@Column(name = "MATRICULA", nullable = false, length = 8)
-	private String matricula;
+	@Column(name = "ID", nullable = false, length = 8)
+	private String id;
 
 	@Column(name = "NOME", nullable = false, length = 64)
 	private String nome;
 
-	@Enumerated(EnumType.ORDINAL)
+	@Enumerated
 	@Column(name = "SEXO", nullable = false, length = 1)
 	private Sexo sexo;
 
@@ -45,7 +44,7 @@ public class Aluno implements Serializable {
 	@Column(name = "NASCIMENTO", nullable = false)
 	private LocalDate dataNascimento;
 
-	@Enumerated(EnumType.ORDINAL)
+	@Enumerated
 	@Column(name = "SITUACAO", nullable = false, length = 1)
 	private Situacao situacao;
 
@@ -58,12 +57,12 @@ public class Aluno implements Serializable {
 	@Embedded
 	private Telefone telefone = new Telefone();
 
-	public String getMatricula() {
-		return matricula;
+	public String getId() {
+		return id;
 	}
 
-	public void setMatricula(String matricula) {
-		this.matricula = matricula;
+	public void setId(String matricula) {
+		this.id = matricula;
 	}
 
 	public String getNome() {
@@ -132,14 +131,14 @@ public class Aluno implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Aluno [matricula=" + matricula + ", nome=" + nome + ", sexo=" + sexo + ", rg=" + rg
+		return "Aluno [matricula=" + id + ", nome=" + nome + ", sexo=" + sexo + ", rg=" + rg
 				+ ", dataNascimento=" + dataNascimento + ", situacao=" + situacao + ", email=" + email + ", endereco="
 				+ endereco + ", telefone=" + telefone + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(email, matricula);
+		return Objects.hash(email, id);
 	}
 
 	@Override
@@ -151,6 +150,6 @@ public class Aluno implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Aluno other = (Aluno) obj;
-		return Objects.equals(email, other.email) && Objects.equals(matricula, other.matricula);
+		return Objects.equals(email, other.email) && Objects.equals(id, other.id);
 	}
 }

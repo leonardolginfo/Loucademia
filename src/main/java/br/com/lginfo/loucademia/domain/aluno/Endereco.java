@@ -5,6 +5,7 @@ import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Embeddable
@@ -27,7 +28,7 @@ public class Endereco implements Serializable{
 	private String cidade;
 
 	@ManyToOne
-	@Column(name = "ESTADO_ID", nullable = false)
+	@JoinColumn(name = "ESTADO_ID", nullable = false)
 	private Estado estado = new Estado();
 
 	@Column(name = "CEP", nullable = false, length = 8)
